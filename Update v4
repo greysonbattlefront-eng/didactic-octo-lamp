@@ -1,0 +1,3 @@
+import os
+
+GITHUB_TOKEN = os.environ.get("TOKEN_AI")
