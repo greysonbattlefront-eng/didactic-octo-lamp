@@ -13,7 +13,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+- name: Append AI Memory
+  env:
+    GITHUB_TOKEN_AI: ${{ secrets.GITHUB_TOKEN_AI }}
+  run: |
+    python scripts/append_memory.py
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
